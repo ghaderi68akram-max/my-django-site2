@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت من</title>
+    <style>
+        body {
+            /* استفاده از عکس با کمک تگ static */
+            background-image: url("{% static 'backgrand/backgrand2.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Tahoma, sans-serif; /* فونت ساده برای نمایش بهتر */
+        }
+
+        .fade-in {
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .button {
+            text-decoration: none; /* حذف خط زیر لینک */
+        }
+
+        .button button {
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .button button:hover {
+            background-color: #0056b3;
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fade-in" style="text-align: center;">
+        <h1>Zeal member shop.</h1>
+        
+        <!-- لینک اصلی دکمه -->
+        <a href="{% url 'shop' %}" class="button">
+            <button>برای شروع خرید کلیک کنید</button>
+        </a>
+    </div>
+
+</body>
+</html>

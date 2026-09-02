@@ -1,0 +1,399 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه ممبر</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* تنظیمات برای نمایش ۴ تایی */
+        .products {
+            display: flex;
+            flex-wrap: wrap; /* اگر جا نشدند، به خط بعد می‌روند */
+            justify-content: center; 
+            gap: 15px; /* فاصله بین کارت‌ها */
+            padding: 20px;
+        }
+
+        .product-card {
+            /* فرمول برای ۴ تایی شدن: (۱۰۰ درصد تقسیم بر ۴) منهای فضا برای Gap */
+            flex: 0 1 calc(25% - 20px); 
+            min-width: 220px; /* جلوگیری از خیلی کوچک شدن در موبایل */
+            box-sizing: border-box;
+        }
+
+        /* برای اینکه در موبایل محصولات ۲ تایی یا ۱ تایی شوند و خوانا بمانند */
+        @media (max-width: 768px) {
+            .product-card {
+                flex: 0 1 calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .product-card {
+                flex: 0 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-header">
+        <h1 style="text-align: center;">صفحه خرید</h1>
+        <p style="text-align: center;">دسته بندی محصول را انتخاب کنید</p>
+    </div>
+
+    <div class="shop-container">
+        <div class="category">
+            <h2 style="text-align: center; margin-bottom: 20px;">روبیکا 👥</h2>
+                    
+            <di class="products">           
+
+                <!-- محصول ۱ -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>100 ممبر 📈</h3
+                    <p>ممبر با کیفیت برای کانال شما</p>
+                    <span class="price">50,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+
+
+                <!-- محصول ۲ -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>200 ممبر 📈</h3>
+                   <p>ممبر با کیفیت برای کانال شما</p>
+                    <span class="price">100,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+                <!-- محصول ۳ -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>500 ممبر 📈</h3>
+                    <p>بسته اقتصادی و پرطرفدار</p>
+                    <span class="price">250,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+                <!-- محصول ۴ (جدید که اضافه کردم) -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>1000 ممبر 🚀</h3
+                    <p>بسته حرفه‌ای و تضمینی</p>
+                    <span class="price">500,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+            </div> <!-- پایان products -->
+        </div> <!-- پایان category -->
+    </div> <!-- پایان shop-container -->
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه ممبر</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* تنظیمات برای نمایش ۴ تایی */
+        .products {
+            display: flex;
+            flex-wrap: wrap; /* اگر جا نشدند، به خط بعد می‌روند */
+            justify-content: center; 
+            gap: 15px; /* فاصله بین کارت‌ها */
+            padding: 20px;
+        }
+
+        .product-card {
+            /* فرمول برای ۴ تایی شدن: (۱۰۰ درصد تقسیم بر ۴) منهای فضا برای Gap */
+            flex: 0 1 calc(25% - 20px); 
+            min-width: 220px; /* جلوگیری از خیلی کوچک شدن در موبایل */
+            box-sizing: border-box;
+        }
+
+        /* برای اینکه در موبایل محصولات ۲ تایی یا ۱ تایی شوند و خوانا بمانند */
+        @media (max-width: 768px) {
+            .product-card {
+                flex: 0 1 calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .product-card {
+                flex: 0 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <div class="shop-container">
+        <div class="category">
+            <h2 style="text-align: center; margin-bottom: 20px;">آپارات 👥</h2>
+            
+            <di class="products">
+                
+                <!-- محصول ۱ -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo2.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>100 ممبر 📈</h3
+                    <p>ممبر با کیفیت برای کانال شما</p>
+                    <span class="price">20,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+                <!-- محصول ۲ -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo2.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>200 ممبر 📈</h3>
+                   <p>ممبر با کیفیت برای کانال شما</p>
+                    <span class="price">40,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+                <!-- محصول ۳ -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo2.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>500 ممبر 📈</h3>
+                    <p>بسته اقتصادی و پرطرفدار</p>
+                    <span class="price">90,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+                <!-- محصول ۴ (جدید که اضافه کردم) -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo2.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>1000 ممبر </h3
+                    <p>بسته حرفه‌ای و تضمینی</p>
+                    <span class="price">160,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+            </div> <!-- پایان products -->
+        </div> <!-- پایان category -->
+    </div> <!-- پایان shop-container -->
+
+</body>
+</html>
+        {% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه ممبر</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* تنظیمات برای نمایش ۴ تایی */
+        .products {
+            display: flex;
+            flex-wrap: wrap; /* اگر جا نشدند، به خط بعد می‌روند */
+            justify-content: center; 
+            gap: 15px; /* فاصله بین کارت‌ها */
+            padding: 20px;
+        }
+
+        .product-card {
+            /* فرمول برای ۴ تایی شدن: (۱۰۰ درصد تقسیم بر ۴) منهای فضا برای Gap */
+            flex: 0 1 calc(25% - 20px); 
+            min-width: 220px; /* جلوگیری از خیلی کوچک شدن در موبایل */
+            box-sizing: border-box;
+        }
+
+        /* برای اینکه در موبایل محصولات ۲ تایی یا ۱ تایی شوند و خوانا بمانند */
+        @media (max-width: 768px) {
+            .product-card {
+                flex: 0 1 calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .product-card {
+                flex: 0 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    </div>
+
+    <div class="shop-container">
+        <div class="category">
+            <h2 style="text-align: center; margin-bottom: 20px;">اینستاگرام 👥</h2>
+            
+            <di class="products">
+                
+                <!-- محصول ۱ -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo4.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>100 ممبر 📈</h3
+                    <p>ممبر با کیفیت برای کانال شما</p>
+                    <span class="price">30,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+                <!-- محصول ۲ -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo4.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>200 ممبر 📈</h3>
+                   <p>ممبر با کیفیت برای کانال شما</p>
+                    <span class="price">50,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+                <!-- محصول ۳ -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo4.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>500 ممبر 📈</h3>
+                    <p>بسته اقتصادی و پرطرفدار</p>
+                    <span class="price">100,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+                <!-- محصول ۴ (جدید که اضافه کردم) -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo4.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>1000 ممبر 🚀</h3
+                    <p>بسته حرفه‌ای و تضمینی</p>
+                    <span class="price">180,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+            </div> <!-- پایان products -->
+        </div> <!-- پایان category -->
+    </div> <!-- پایان shop-container -->
+
+</body>
+</html>
+
+ 
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>سایت من</title>
+    <style>
+        body {
+            /* استفاده از عکس با کمک تگ static */
+            background-image: url("{% static 'backgrand/backgrand4.jpg' %}");
+            
+            /* تنظیمات برای اینکه عکس تمام صفحه باشد و تکرار نشود */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه ممبر</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* تنظیمات برای نمایش ۴ تایی */
+        .products {
+            display: flex;
+            flex-wrap: wrap; /* اگر جا نشدند، به خط بعد می‌روند */
+            justify-content: center; 
+            gap: 15px; /* فاصله بین کارت‌ها */
+            padding: 20px;
+        }
+
+        .product-card {
+            /* فرمول برای ۴ تایی شدن: (۱۰۰ درصد تقسیم بر ۴) منهای فضا برای Gap */
+            flex: 0 1 calc(25% - 20px); 
+            min-width: 220px; /* جلوگیری از خیلی کوچک شدن در موبایل */
+            box-sizing: border-box;
+        }
+
+        /* برای اینکه در موبایل محصولات ۲ تایی یا ۱ تایی شوند و خوانا بمانند */
+        @media (max-width: 768px) {
+            .product-card {
+                flex: 0 1 calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .product-card {
+                flex: 0 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    </div>
+
+    <div class="shop-container">
+        <div class="category">
+            <h2 style="text-align: center; margin-bottom: 20px;">تلگرام 👥</h2>
+                    
+            <di class="products">           
+
+                <!-- محصول ۱ -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo6.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>100 ممبر 📈</h3
+                    <p>ممبر با کیفیت برای کانال شما</p>
+                    <span class="price">30,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+
+
+                <!-- محصول ۲ -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo6.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>200 ممبر 📈</h3>
+                   <p>ممبر با کیفیت برای کانال شما</p>
+                    <span class="price">60,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+                <!-- محصول ۳ -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo6.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>500 ممبر 📈</h3>
+                    <p>بسته اقتصادی و پرطرفدار</p>
+                    <span class="price">120,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+                <!-- محصول ۴ (جدید که اضافه کردم) -->
+                <div class="product-card">
+                    <img src="{% static 'images/photo6.png' %}" alt="ممبر" style="width: 100%;">
+                    <h3>1000 ممبر 🚀</h3
+                    <p>بسته حرفه‌ای و تضمینی</p>
+                    <span class="price">170,000 تومان</span>
+                    <button class="buy-btn">خرید محصول</button>
+                </div>
+
+            </div> <!-- پایان products -->
+        </div> <!-- پایان category -->
+    </div> <!-- پایان shop-container -->
+
+</body>
+</html>

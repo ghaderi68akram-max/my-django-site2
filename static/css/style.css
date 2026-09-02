@@ -1,0 +1,234 @@
+body{
+    background-color: rgb(63, 99, 122);
+}
+
+.my-text {
+    font-size: 30px;      /* سایز متن */
+    color: blue;          /* رنگ متن */
+    font-weight: bold;    /* ضخیم کردن متن */
+    text-align: center;   /* وسط‌چین کردن */
+}
+/* انیمیشن ظاهر شدن */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.button {
+    background-color: #3498db;
+    color: rgb(230, 155, 155);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+.my-text {
+    font-size: 30px;
+    color: rgb(0, 0, 255);
+    font-weight: bold;
+    text-align: center;
+
+    border-top: 1px solid #888; /* خط نازک بالای متن */
+    padding-top: 15px;           /* فاصله متن از خط */
+    margin-top: 30px;            /* فاصله خط از بالای صفحه */
+}
+.button {
+    background-color: #3498db;
+    color: rgb(255, 255, 255);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    display: block;
+    margin: 30px auto;
+}
+.my-video {
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+.video-header {
+    padding: 25px 40px;
+}
+
+@media (max-width: 600px) {
+
+    .video-header {
+        padding: 20px 15px;
+    }
+
+    .video-header h1 {
+        font-size: 25px;
+    }
+
+    .video-header p {
+        font-size: 16px;
+    }
+
+    .videos {
+        padding: 15px;
+    }
+
+}
+.shop-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.category h2 {
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background: #111;
+    border: 1px solid #d4af37;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    color: rgb(236, 0, 0);
+}
+
+.product img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.product h3 {
+    margin: 12px 0 5px;
+}
+
+.product p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+
+
+
+.price {
+    display: block;
+    color: #d4af37;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.product button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #d4af37;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+body {
+    background-color: #00637c;
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    text-align: right;
+}
+
+.video-header {
+    background-color: rgb(144, 167, 197);
+    padding: 25px 40px;
+    border-bottom: 2px solid #000000;
+}
+
+.shop-container {
+    padding: 30px;
+    display: flex;
+    justify-content: center; /* وسط‌چین کردن کل دسته بندی */
+}
+
+.product-card {
+            
+    
+    background: rgba(0, 255, 234, 0.253);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+}
+
+/* انیمیشن وقتی موس روی کارت می‌رود */
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    max-width: 100px;
+}
+
+.buy-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #00ff37;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
